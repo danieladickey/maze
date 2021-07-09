@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">   
+    <link rel="stylesheet" href="style/style.css" type="text/css"/>
+    <title>Maze</title>
+</head>
+
+<body>
+    <div id = "box"; class="centered"> 
+        <!-- Header -->
+        <div id="header"; class="blue-box">
+            <h1 id="time" class="align-left">Time: 00:00</h1>
+            <h1 id="score" class="alight-right right">Score: 0</h1>
+        </div>
+
+        <!-- Middle -->
+        <div id="middle">
+
+            <!-- left side -->
+            <span id="output-pane">
+                <canvas id = "canvas" width = "1000" height = "1000">
+                </canvas>
+            </span>
+
+            <!-- right side -->
+            <span id="event-creation-controls">
+
+                <!-- form  -->
+                <form id="form">
+                    <br>    
+                    <label for="size-drop-down">Maze Size:</label>
+                    <select id="size-drop-down">
+                        <option value="5">5 x 5</option>
+                        <option value="10">10 x 10</option>
+                        <option value="15">15 x 15</option>
+                        <option value="20">20 x 20</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="New Game" id="new-game-button" class="button">
+                </form>
+                <br><br><br>
+
+                <h3>High Scores:</h3>
+                <div id="high-score-div" >
+                    
+
+                </div>                
+            </span>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer" class="blue-box row">
+            <h3 id="bread" class="column left">[B]read crumbs: Off</h3>
+            <h3 id="hint" class="column">[H]int: Off</h3>
+            <h3 id="path" class="column right">[P]ath to finish: Off</h3>
+        </div>
+
+    </div>
+
+    <script src = "scripts/maze.js"></script>
+    <script src = "scripts/renderer.js"></script>
+    <script src = "scripts/objects.js"></script>
+    <script src = "scripts/functions.js"></script>
+    <script src = "scripts/main.js"></script>
+</body>
+</html>
